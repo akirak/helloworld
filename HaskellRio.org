@@ -1,0 +1,35 @@
+* Haskell Rio
+[[file:haskell/rio-demo/]]
+** Creating the project
+Initialize the project using =stack=:
+
+#+begin_src sh
+  cd haskell
+  stack new rio-demo rio
+  cd rio-demo
+#+end_src
+
+Create [[file:haskell/rio-demo/shell.nix][shell.nix]] and enter the subshell:
+
+#+begin_src sh
+nix-shell
+#+end_src
+
+#+begin_src sh
+cabal2nix . > project.nix
+#+end_src
+
+Create [[file:haskell/rio-demo/release.nix][release.nix]].
+
+#+begin_src sh
+nix-shell --attr env release.nix
+#+end_src
+** Building the project
+#+begin_src sh
+cabal build
+cabal run rio-demo-exe
+#+end_src
+** Testing the project
+#+begin_src sh
+cabal test
+#+end_src
