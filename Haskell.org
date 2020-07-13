@@ -1,6 +1,6 @@
-* Haskell Rio
-[[file:haskell/rio-demo/]]
-** Creating the project
+* Haskell
+** Development using haskell-nix
+*** Creating the project
 Initialize the project using =stack=:
 
 #+begin_src sh
@@ -24,12 +24,21 @@ Create [[file:haskell/rio-demo/release.nix][release.nix]].
 #+begin_src sh
 nix-shell --attr env release.nix
 #+end_src
-** Building the project
+*** Building the project
 #+begin_src sh
 cabal build
 cabal run rio-demo-exe
 #+end_src
-** Testing the project
+*** Testing the project
 #+begin_src sh
 cabal test
 #+end_src
+** Demo projects from Stack templates
+*** rio
+[[file:haskell/rio-demo/]]
+*** servant
+[[file:haskell/servant-demo/]]
+**** Running locally                                                :verb:
+template http://localhost:8080
+***** GET root
+get /
