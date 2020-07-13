@@ -1,20 +1,6 @@
 * helloworld
-A collection of various Hello World projects
+This is a repository for tracking how to create various types of software projects.
+It contains demo projects as well as instructions on how to initialize those projects.
 
-# Add CI badges here
-
-#+BEGIN_HTML
-#+END_HTML
-** Table of contents
-:PROPERTIES:
-:TOC: siblings
-:END:
-
-** COMMENT Meta :noexport:
-:PROPERTIES:
-:TOC:      ignore
-:END:
-# The COMMENT keyword prevents GitHub's renderer from showing this entry.
-# Local Variables:
-# eval: (when (require (quote org-make-toc) nil t) (org-make-toc-mode t))
-# End:
+** Lists of languages
+- [[file:Haskell.org][Haskell]]
