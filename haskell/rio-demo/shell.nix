@@ -1,12 +1,8 @@
 let
-  pkgs = import <nixpkgs> {};
-in
-  pkgs.mkShell {
-
-    buildInputs = with pkgs; [
-      ghc
-      cabal2nix
-      cabal-install
-      nix-prefetch-git
-    ];
-  }
+  pkgs = import <nixpkgs> { };
+  release = import ./release.nix;
+in pkgs.mkShell
+  {
+  buildInputs = release.env.nativeBuildInputs
+    ++ [ pkgs.haskellPackages.cabal-install ];
+}
