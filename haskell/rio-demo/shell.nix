@@ -1,8 +1,7 @@
 let
   pkgs = import <nixpkgs> { };
   release = import ./release.nix;
-in pkgs.mkShell
-  {
+in pkgs.mkShell {
   buildInputs = release.env.nativeBuildInputs
-    ++ [ pkgs.haskellPackages.cabal-install ];
+    ++ (with pkgs.haskellPackages; [ cabal-install hlint stylish-haskell ]);
 }
