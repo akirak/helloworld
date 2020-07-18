@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+  </head>
+  <body>
+    <h1>AlpineJS Demo</h1>
+    <p>Hello world</p>
+    <!-- An example from the documentation at https://github.com/alpinejs/alpine/ -->
+    <div x-data="{ open: false }">
+      <button @click="open = true">Open Dropdown</button>
+
+      <ul
+        x-show="open"
+        @click.away="open = false"
+        >
+        Dropdown Body
+      </ul>
+    </div>
+  </body>
+</html>
