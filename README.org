@@ -4,3 +4,4 @@ It contains demo projects as well as instructions on how to initialize those pro
 
 ** Lists of languages
 - [[file:Haskell.org][Haskell]]
+- [[file:Elixir.org][Elixir]]

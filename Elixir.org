@@ -1,0 +1,46 @@
+* Elixir
+** Phoenix
+You can initialize a Phoenix project using =mix phx.new= command, which is a [[https://elixirschool.com/en/lessons/basics/mix-tasks/][custom mix task]], but you have to install the command first:
+
+#+begin_src sh
+mix archive.install hex phx_new 1.5.3
+#+end_src
+
+[[https://hexdocs.pm/phoenix/installation.html#phoenix][Installation — Phoenix v1.5.3]]
+*** Phoenix LiveView
+This instruction is based on [[https://hexdocs.pm/phoenix_live_view/installation.html#content][the official documentation]].
+
+You can use =mix phx.new= command to initialize a LiveView project:
+
+#+begin_src sh
+mix phx.new hello_liveview --live
+#+end_src
+
+Generate a signing salt (in [[file:phoenix/hello_liveview/config/config.exs][config/config.exs]]):
+
+#+begin_src sh
+mix phx.gen.secret 32
+#+end_src
+
+Install npm packages in =assets= directory:
+
+#+begin_src sh
+npm install --prefix assets
+#+end_src
+
+To run the server, you'll need a Postgres database.
+Create one using =mix=:
+
+#+begin_src sh
+mix ecto.setup
+#+end_src
+
+Start a server:
+
+#+begin_src sh
+mix phx.server
+#+end_src
+* COMMENT Meta                                                     :noexport:
+# Local Variables:
+# nix-buffer-root-file: "phoenix/shell.nix"
+# End:
