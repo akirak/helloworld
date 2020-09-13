@@ -3,3 +3,19 @@
 See [[file:javascript/alpinejs/]].
 
 Documentation: [[https://github.com/alpinejs/alpine][alpinejs/alpine]]
+** Svelte + Snowpack + Tailwind CSS
+Enter =nix-shell -p nodejs= and
+
+#+begin_src sh
+npx create-snowpack-app dir-name --template svelte-tailwind-snowpack
+#+end_src
+
+=create-snowpack-app= initializes a Git repository at the root by default.
+
+To start a development server:
+
+#+begin_src sh
+npm run start
+#+end_src
+
+Reference: [[https://blog.agney.dev/tailwind-snowpack-svelte/][The Mindless - Boy with Silver Wings]]
