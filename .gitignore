@@ -1,1 +1,5 @@
+result
+
 rust/*/target/
+
+haskell/*/dist-newstyle/
