@@ -1,0 +1,11 @@
+* Rust
+** Minimal
+=nix-shell -p cargo= and
+
+#+begin_src sh
+cargo init hello
+#+end_src
+
+to initialize [[file:rust/hello/][a project]].
+
+=cargo run= runs the application.
